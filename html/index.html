@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <meta charset="utf-8">
+    <meta name="description"
+        content="I'm Jonas Perkams. A 20 year old freelancing webdesigner from germany. Find out more and feel free to contact me">
+    <meta name="author" content="Jonas Perkams">
+    <meta name="date" content="2020-07-07T07:39:00+01:00">
+
+    <link rel="stylesheet" href="../styles/main.min.css">
+
+    <title>Jonas Perkams</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="fixed">
+        <progress value="0" max="1"></progress>
+    </div>
+    <div class="page" id="page1">
+        <div class="wrapper">
+            <div data-text id="test"></div>
+            <span class="item">UI & UX designer</span>
+            <span class="item">Backend Tryhard</span>
+            <span class="item">Frontend Developer</span>
+            <span class="item">Webdesigner</span>
+            <span class="item">Game Developer</span>
+
+            <h2>I'm Jonas Perkams </h2>
+        </div>
+        <p id="pointer">&#9759;</p>
+        <div id="pointer-shadow"></div>
+    </div>
+
+    <div class="page" id="page2">
+        <div class="content">
+            <h2>Who I am</h2>
+            <p>
+                I am <span class="text-highlight">Jonas Perkams.</span><br>
+                I'm <span class="text-highlight">20 years old</span> and from a small town right next to <span
+                    class="text-highlight">Berlin.</span><br>
+                I've been into coding and development for as long as I can remember but really started to get into it
+                like <span class="text-highlight">6 years ago.</span><br><br>
+                To find out more about what I do, and have already done, <span class="text-highlight">see further
+                    information below!</span>
+            </p>
+        </div>
+        <img src="../src/img/avatar.jpg" alt="Avatar">
+    </div>
+
+    <div class="page" id="page3">
+        <div class="contentbox">
+            <div class="contentheader">
+                <nav>
+                    <ul>
+                        <li class="active"><a onclick="changePage(0);">Skills</a></li>
+                        <li><a onclick="changePage(1);">Personal Projects</a></li>
+                        <li><a onclick="changePage(2);">Previous Jobs</a></li>
+                        <li><a onclick="changePage(3);">etc.</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="navpage slider slider_active" id="skillscontent">
+                <div id="skillwrapper">
+                    <div class="skill">
+                        <div class="skill-inner">
+                            <div class="skill-front">
+                                <img src="../src/img/html.jpg">
+                            </div>
+                            <div class="skill-back">
+                                <h1>HTML/CSS/JS</h1>
+                                <p>Test</p>
+                                <p>Test Test 123</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-inner">
+                            <div class="skill-front">
+                                <img src="../src/img/php.jpg">
+                            </div>
+                            <div class="skill-back">
+                                <h1>Backend Solutions</h1>
+                                <p>Test</p>
+                                <p>Test Test 123</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-inner">
+                            <div class="skill-front">
+                                <img src="../src/img/wordpress.jpg">
+                            </div>
+                            <div class="skill-back">
+                                <h1>Frameworks etc.</h1>
+                                <p>Test</p>
+                                <p>Test Test 123</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-inner">
+                            <div class="skill-front">
+                                <img src="../src/img/avatar.jpg">
+                            </div>
+                            <div class="skill-back">
+                                <h1>Memes?</h1>
+                                <p>Test</p>
+                                <p>Test Test 123</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-inner">
+                            <div class="skill-front">
+                                <img src="../src/img/adobe.jpg">
+                            </div>
+                            <div class="skill-back">
+                                <h1>Adobe Creative Cloud®</h1>
+                                <p>Test</p>
+                                <p>Test Test 123</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-inner">
+                            <div class="skill-front">
+                                <img src="../src/img/experience.jpg">
+                            </div>
+                            <div class="skill-back">
+                                <h1>Experience</h1>
+                                <p>Test</p>
+                                <p>Test Test 123</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider" id="personal">
+                <ul>
+                    <li>
+                        Multiple websites
+                    </li>
+                    <li>
+                        Game development
+                    </li>
+                    <li>
+                        Learning by learning
+                    </li>
+                </ul>
+
+            </div>
+            <div class="slider" id="jobs">
+                <ul>
+                    <li>
+                        Contact Page
+                    </li>
+                    <li>
+                        Company Landingpage
+                    </li>
+                    <li>
+                        Company Redesign
+                    </li>
+                </ul>
+            </div>
+            <div class="slider" id="etc">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="page4">
+        <div id="contact-form">
+            <ul>
+                <li class="listElement">
+                    <a onclick="nextElement();">
+                        <h3>Contact?</h3>
+                    </a>
+                </li>
+                <li class="listElement">
+                    <input type="text" class="contactInput" placeholder="What's your name?" required />
+                </li>
+                <li class="listElement">
+                    <input type="email" class="contactInput" placeholder="What's your e-mail address?" required />
+                </li>
+                <li class="listElement">
+                    <p>How may I help you?</p>
+                    <label for="com">I want to issue a commission.</label>
+                    <input type="radio" id="com" value="commission" onclick="nextElement();" />
+                    <label for="gen">I have a general question.</label>
+                    <input type="radio" id="gen" value="general" onclick="nextElement();" />
+                    <label for="help">I need help with my project.</label>
+                    <input type="radio" id="help" value="help" onclick="nextElement();" />
+                </li>
+                <li class="listElement">
+                    <input type="text" class="contactInput" placeholder="Your message" required />
+                </li>
+            </ul>
+        </div>
+        <div id="sendButton" onclick="checkContent();">
+            &#187;
+        </div>
+    </div>
+
+
+
+    <script>
+        let wrapper
+        const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+
+        async function writingAll(stringTarget, container) {
+            wrapper = document.querySelector('[' + container + ']')
+            const stringsContainer = document.getElementsByClassName(stringTarget)
+
+            while (wrapper) {
+                for (i = 0; i < stringsContainer.length; i++) {
+                    const string = stringsContainer[i].textContent
+                    await write(string)
+                    await sleep(1000)
+                    await erase()
+                    await sleep(1000)
+                };
+            }
+        };
+
+        async function write(text) {
+            let index = 0
+            while (index < text.length) {
+                const timeout = 100
+                await sleep(timeout)
+                index++
+                wrapper.innerHTML = text.substring(0, index)
+            }
+        };
+
+
+        async function erase() {
+            while (wrapper.textContent.length) {
+                const timeout = 100
+                await sleep(timeout)
+                wrapper.textContent = wrapper.textContent.substring(0, wrapper.textContent.length - 2)
+            }
+        };
+
+        writingAll('item', 'data-text');
+
+        var messages = document.getElementsByClassName('message');
+        async function display() {
+            const timeout = 1000;
+            for (i = 0; i < messages.length; i++) {
+                await (timeout);
+                messages[i].classList.add('message-active');
+            }
+        }
+
+        var carouselPages = document.getElementsByClassName('slider');
+
+        function changePage(num) {
+            for (i = 0; i < carouselPages.length; i++) {
+                carouselPages[i].classList.remove('slider_active');
+            }
+            carouselPages[num].classList.add('slider_active');
+        }
+    </script>
+    <script src="../js/texthighlight.js"></script>
+    <script src="../js/scrollProgress.js"></script>
+    <script src="../js/contactScript.js"></script>
+    <script src="../js/contentnav.js"></script>
+</body>
+
+</html>
